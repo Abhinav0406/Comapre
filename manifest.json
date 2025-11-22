@@ -1,0 +1,42 @@
+{
+  "name": "File Compare Tool",
+  "short_name": "File Compare",
+  "description": "Compare CSV and Excel files side-by-side with visual highlighting",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Compare Files",
+      "short_name": "Compare",
+      "description": "Quickly compare two files",
+      "url": "/",
+      "icons": [{ "src": "logo.svg", "sizes": "192x192" }]
+    }
+  ]
+}
+

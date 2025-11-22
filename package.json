@@ -1,0 +1,78 @@
+{
+  "name": "file-compare-tool",
+  "version": "1.0.0",
+  "description": "Compare CSV and Excel files side-by-side with visual highlighting",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "streamlit run app.py",
+    "electron": "electron .",
+    "electron:dev": "electron . --dev",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder --win --mac --linux"
+  },
+  "keywords": [
+    "csv",
+    "excel",
+    "compare",
+    "diff",
+    "file-comparison"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.filecompare.tool",
+    "productName": "File Compare Tool",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "app.py",
+      "compare.py",
+      "requirements.txt",
+      "electron/**/*",
+      "logo.svg",
+      "manifest.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.png",
+      "category": "Utility"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
+
