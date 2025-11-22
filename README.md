@@ -1,130 +1,50 @@
 # File Compare Tool
 
-A powerful web application for comparing CSV and Excel files side-by-side with visual highlighting. Available as a Progressive Web App (PWA) and Electron desktop application.
+A powerful web application for comparing CSV and Excel files side-by-side with visual highlighting. Upload two files and instantly see differences with an intuitive, modern interface.
 
 ## Features
 
-- 📊 Compare CSV and Excel files (.xlsx, .xls)
-- 🔍 Visual highlighting of differences
-- 📈 Order-agnostic row comparison
-- 📥 Export results to CSV or Excel
-- 🎨 Modern, responsive UI
-- 🔄 Text numbers treated as equal to numeric values (e.g., "123" = 123)
+- 📊 **Compare CSV and Excel files** (.xlsx, .xls)
+- 🔍 **Visual highlighting** of differences in red
+- 📈 **Order-agnostic comparison** - finds rows that don't match regardless of order
+- 📥 **Export results** to CSV or Excel format
+- 🎨 **Modern, clean UI** with compact design
+- 🔄 **Smart comparison** - treats text numbers as equal to numeric values (e.g., "123" = 123)
+- 📱 **Progressive Web App (PWA)** - installable on mobile and desktop
+- 💻 **Electron desktop app** - run as a native desktop application
 
-## Installation
+## How It Works
 
-### Prerequisites
+1. **Upload two files** - CSV or Excel format
+2. **Click Compare** - the app automatically detects file types and encoding
+3. **View differences** - side-by-side comparison with highlighted differences
+4. **Export results** - download comparison reports in CSV or Excel format
 
-- Python 3.8+
-- pip
+## Comparison Features
 
-### Setup
+- **Cell-by-cell comparison** with visual highlighting
+- **Order-agnostic row matching** - finds unmatched rows even if files have different row orders
+- **Text/number normalization** - "123" (text) is treated as equal to 123 (number)
+- **Compact diff view** - see only the differences in a clean format
+- **Multiple export options** - CSV, Excel with highlighting, side-by-side reports
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## Use Cases
 
-2. Generate icons (optional, for PWA/Electron):
-```bash
-pip install cairosvg pillow
-python generate_icons.py
-```
+- Compare inventory exports from different systems
+- Verify data migrations and transfers
+- Find discrepancies between file versions
+- Audit data consistency across sources
+- Quick data validation and quality checks
 
-## Usage
+## Technology
 
-### Web App (Streamlit)
+Built with:
+- **Streamlit** - Python web framework
+- **Pandas** - Data analysis and comparison
+- **OpenPyXL** - Excel file handling
+- **Electron** - Desktop app wrapper
+- **PWA** - Progressive Web App support
 
-Run the Streamlit app:
-```bash
-streamlit run app.py
-```
 
-The app will be available at `http://localhost:8501`
 
-### Electron Desktop App
-
-1. Install Electron dependencies:
-```bash
-npm install
-```
-
-2. Run Electron app:
-```bash
-npm run electron
-```
-
-3. Build for distribution:
-```bash
-# Windows
-npm run build:win
-
-# macOS
-npm run build:mac
-
-# Linux
-npm run build:linux
-
-# All platforms
-npm run build:all
-```
-
-### Progressive Web App (PWA)
-
-1. Deploy the Streamlit app to a web server
-2. Ensure `manifest.json` and `service-worker.js` are accessible
-3. Users can install the app from their browser
-
-## Project Structure
-
-```
-.
-├── app.py                 # Main Streamlit application
-├── compare.py             # Comparison logic
-├── logo.svg              # App logo (SVG)
-├── manifest.json         # PWA manifest
-├── service-worker.js     # PWA service worker
-├── package.json          # Electron configuration
-├── electron/
-│   ├── main.js          # Electron main process
-│   └── preload.js       # Electron preload script
-├── requirements.txt     # Python dependencies
-└── README.md           # This file
-```
-
-## Development
-
-### Running in Development Mode
-
-**Streamlit:**
-```bash
-streamlit run app.py
-```
-
-**Electron (with DevTools):**
-```bash
-npm run electron:dev
-```
-
-## Building
-
-### Electron Builds
-
-Builds are configured in `package.json` using electron-builder. Output will be in the `dist/` directory.
-
-### PWA Deployment
-
-1. Deploy your Streamlit app (e.g., Streamlit Cloud, Heroku, etc.)
-2. Ensure all PWA files are accessible:
-   - `manifest.json`
-   - `service-worker.js`
-   - Icon files (`icon-192.png`, `icon-512.png`)
-
-## License
-
-MIT
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
+                              **THANK YOU**
